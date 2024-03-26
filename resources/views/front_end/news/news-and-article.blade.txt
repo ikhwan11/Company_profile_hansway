@@ -1,0 +1,108 @@
+@extends('layout.mainLayout')
+@section('body')
+
+
+<!-- ======================
+      Blog classic
+    ========================= -->
+
+<section id="blogClassic" class="blog blog-single  blog-classic  pb-90">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-8">
+
+                @foreach($data as $news)
+                <!-- Blog Item #1 -->
+                <div class="blog-item text-center">
+                    <div class="blog__img">
+                        <a href="/News-&-Article/{{$news->slug}}">
+                            <img src="{{asset('storage/'.$news->image)}}" alt="blog image">
+                        </a>
+                    </div><!-- /.entry-img -->
+                    <div class="blog__content">
+                        <div class="blog__meta-cat">
+                            @if($news->category == '1')
+                            <a href="">News</a>
+                            @else
+                            <a href="">Article</a>
+                            @endif
+                        </div><!-- /.blog-meta-cat -->
+                        <h4 class="blog__title"><a href="/News-&-Article/{{$news->slug}}"> {{$news->title}}</a></h4>
+                        <div class="blog__meta justify-content-center">
+                            <span class="blog__meta-author pr-20">By: <span>{{$news->user->name}}</span></span>
+                            <span class="blog__meta-date">{{ date('M, d Y', strtotime($news->created_at)) }}</span>
+                        </div><!-- /.blog-meta -->
+                        <div class="divider__line divider__theme divider__center"></div>
+                        <p class="blog__desc mb-0">{{$news->excerpt}}</p>
+                    </div><!-- /.entry-content -->
+                </div><!-- /.blog-item -->
+                @endforeach
+
+                <nav class="pagination-area mb-3">
+                    <ul class="pagination">
+                        <!-- Previous Page Link -->
+                        <li><a href="{{ $data->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+
+                        <!-- Pagination Elements -->
+                        @foreach ($data as $element)
+                        @if (is_string($element))
+                        <li class="disabled"><span>{{ $element }}</span></li>
+                        @endif
+
+                        @if (is_array($element))
+                        @foreach ($element as $page => $url)
+                        @if ($page == $data->currentPage())
+                        <li class="active"><span>{{ $page }}</span></li>
+                        @else
+                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        @endif
+                        @endforeach
+                        @endif
+                        @endforeach
+
+                        <!-- Additional Pagination Numbers -->
+                        @for ($i = max(1, $data->currentPage() - 1); $i <= min($data->currentPage() + 1, $data->lastPage()); $i++)
+                            <li><a href="{{ $data->url($i) }}">{{ $i }}</a></li>
+                            @endfor
+
+                            <!-- Next Page Link -->
+                            <li><a href="{{ $data->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                    </ul>
+                </nav>
+
+
+
+            </div><!-- /.col-lg-8 -->
+
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <aside class="sidebar mb-30">
+                    <div class="widget widget-search">
+                        <h5 class="widget__title">Search</h5>
+                        <div class="widget__content">
+                            <form class="widget__form-search" action="/News-&-Article">
+                                <input type="text" class="form-control" placeholder="Search.." name="search">
+                                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div><!-- /.widget-content -->
+                    </div><!-- /.widget-search -->
+                    <div class="widget widget-categories">
+                        <h5 class="widget__title">categories</h5>
+                        <div class="widget-content">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Retail & Consumer</a></li>
+                                <li><a href="#">Sciences & Healthcare</a></li>
+                                <li><a href="#">Industrial & Chemical</a></li>
+                                <li><a href="#">Power Generation</a></li>
+                                <li><a href="#">Food & Beverage</a></li>
+                                <li><a href="#">Oil & Gas</a></li>
+                            </ul>
+                        </div><!-- /.widget-content -->
+                    </div><!-- /.widget-categories -->
+                </aside><!-- /.sidebar -->
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.blog classic -->
+
+@endsection

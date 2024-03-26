@@ -1,0 +1,207 @@
+@extends('layout.mainLayout')
+@section('body')
+
+<!-- ========================
+       page title 
+    =========================== -->
+<section id="page-title" class="page-title bg-overlay bg-parallax">
+    <div class="bg-img"><img src="{{asset('storage/'.$data->image)}}" alt="background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h1 class="pagetitle__heading">{{$data->title}}</h1>
+            </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.page-title -->
+
+<!-- ======================
+      Blog Single
+    ========================= -->
+<section id="blogSingleCentered" class="blog blog-single pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <div class="blog-item"><!-- /.entry-img -->
+                    <div class="blog__content">
+                        <div class="blog__meta justify-content-center">
+                            <span class="blog__meta-author pr-20">By: <span>{{$data->user->name}}</span></span>
+                            <span class="blog__meta-date">{{ date('M, d Y', strtotime($data->created_at)) }}</span>
+                        </div><!-- /.blog-meta -->
+                        <div class="divider__line divider__theme divider__center"></div>
+                        <div class="blog__desc">
+                            {!!$data->body!!}
+                        </div><!-- /.blog-desc -->
+                    </div><!-- /.entry-content -->
+                </div><!-- /.blog-item -->
+                <div class="row">
+                    <!-- <div class="col-sm-12 col-md-8 col-lg-8">
+                        <div class="blog__tags mb-30">
+                            <a href="#">Responsive</a>
+                            <a href="#">Modern</a>
+                            <a href="#">Corporate</a>
+                            <a href="#">Business</a>
+                        </div>
+                    </div> -->
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="blog-share">
+                            <div class="social__icons justify-content-end mb-30">
+                                <h5 class="blog__share-title">Share :</h5>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div><!-- /.blog-share -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+
+                <!-- <div class="blog-widget blog-nav">
+                    <div class="blog__prev">
+                        <a href="#">
+                            <div class="blog__nav-img">
+                                <img src="{{asset('front_templates')}}/images/blog/thumbs/1.jpg" alt="blog thumb">
+                            </div>
+                            <div class="blog__nav-content">
+                                <span>Previous</span>
+                                <h6>Importers achieve cost savings through the First Sale rule!</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__next">
+                        <a href="#">
+                            <div class="blog__nav-content">
+                                <span>Next</span>
+                                <h6>Cargo flow through better supply chain visibility, control.</h6>
+                            </div>
+                            <div class="blog__nav-img">
+                                <img src="{{asset('front_templates')}}/images/blog/thumbs/2.jpg" alt="blog thumb">
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+
+                <div class="blog-widget">
+                    <div class="blog-author">
+                        <div class="blog__author-avatar">
+                            <img src="{{asset('storage/'.$data->user->image)}}" alt="avatar">
+                        </div><!-- /.author-avatar  -->
+                        <div class="blog__author-content">
+                            <h6 class="blog__author-name">{{$data->user->name}}</h6>
+                            <p class="blog__author-bio">Founded by Begha over many cups of tea at her kitchen table in 2009, our
+                                brand promise is simple: to
+                                provide powerful digital marketing solutions to small and medium businesses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="blog-comments mb-50">
+                    <h5 class="blog__widget-title">2 comments</h5>
+                    <ul class="comments-list">
+                        <li class="comment__item">
+                            <div class="comment__avatar">
+                                <img src="{{asset('front_templates')}}/images/blog/author/2.jpg" alt="avatar">
+                            </div>
+                            <div class="comment__content">
+                                <h6 class="comment__author">Richard Muldoone</h6>
+                                <span class="comment__date">Feb 28, 2017 - 08:07 pm</span>
+                                <p class="comment__desc">The example about the mattress sizing page you mentioned in the last WBF
+                                    can be a perfect example
+                                    of new keywords and content, and broadening the funnel as well. I can only imagine the sale
+                                    numbers if that was the site of a mattress selling company.</p>
+                                <a class="comment__reply" href="#">reply</a>
+                            </div>
+                            <ul class="nested__comment">
+                                <li class="comment__item">
+                                    <div class="comment__avatar">
+                                        <img src="{{asset('front_templates')}}/images/blog/author/3.jpg" alt="avatar">
+                                    </div>
+                                    <div class="comment__content">
+                                        <h6 class="comment__author">Mike Dooley</h6>
+                                        <span class="comment__date">Feb 28, 2017 - 08:22 pm</span>
+                                        <p class="comment__desc">The example about the mattress sizing page you mentioned in the last
+                                            WBF can be a perfect
+                                            example of new keywords and content, and broadening the funnel as well. I can only imagine the
+                                            sale numbers if that was the site of a mattress selling company.</p>
+                                        <a class="comment__reply" href="#">reply</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <!-- <div class="blog-widget blog-comments-form">
+                    <h5 class="blog__widget-title">Leave A Reply</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name:">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email:">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <button type="submit" class="btn btn__secondary btn__block">Submit Comment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div> -->
+
+            </div><!-- /.col-lg-8 -->
+
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <aside class="sidebar mb-30">
+                    <div class="widget widget-categories">
+                        <h5 class="widget__title">categories</h5>
+                        <div class="widget-content">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Retail & Consumer</a></li>
+                                <li><a href="#">Sciences & Healthcare</a></li>
+                                <li><a href="#">Industrial & Chemical</a></li>
+                                <li><a href="#">Power Generation</a></li>
+                                <li><a href="#">Food & Beverage</a></li>
+                                <li><a href="#">Oil & Gas</a></li>
+                            </ul>
+                        </div><!-- /.widget-content -->
+                    </div><!-- /.widget-categories -->
+                    <div class="widget widget-posts">
+                        <h5 class="widget__title">Recent Posts</h5>
+                        <div class="widget__content">
+
+                            @foreach($recent as $baru)
+                            <!-- post item #1 -->
+                            <div class="widget-post-item">
+                                <div class="widget__post-img">
+                                    <a href="/News-&-Article/{{$baru->slug}}"><img src="{{asset('storage/'.$baru->image)}}" alt="product"></a>
+                                </div><!-- /.widget-post-img -->
+                                <div class="widget__post-content">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <!-- <div class="widget__post-cat">
+                                            <a href="#">Insights</a><a href="#">Management</a>
+                                        </div> -->
+                                        <span class="widget__post-date">{{ date('M, d Y', strtotime($baru->created_at)) }}</span>
+                                    </div>
+                                    <h6 class="widget__post-title"><a href="/News-&-Article/{{$baru->slug}}">{{$baru->title}}</a></h6>
+                                </div><!-- /.widget-post-content -->
+                            </div><!-- /.widget-post-item -->
+                            @endforeach
+
+                        </div><!-- /.widget-content -->
+                    </div><!-- /.widget-posts -->
+                </aside><!-- /.sidebar -->
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.blog Single -->
+
+@endsection
