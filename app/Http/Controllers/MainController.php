@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ApplicationReceived as ApplicationReceivedMail;
 use App\Models\Contact;
 use App\Models\News_category;
+use App\Models\News_comment;
 use Carbon\Carbon;
 
 
@@ -110,26 +111,25 @@ class MainController extends Controller
 
     // news
 
-    public function news(Ads $ads)
+    public function news(News_comment $komen)
     {
 
         return view('front_end/news/news-and-article', [
             'title' => 'News & Article',
             'navbar' => Company::all(),
-            'hot' => News::where('category', 'hot-topic')->latest()->paginate(3),
-            'data_atas' => News::latest()->paginate(4),
-            'data' => News::latest()->filter(request(['search']))->paginate(6)->withQueryString(),
+            'hot' => News::where('category', 'hot-topic')->latest()->take(3)->get(),
+            'data_atas' => News::latest()->take(4)->get(),
             'image' => Page::find(5),
-            'semua' => News::latest()->get(),
-            'latest' => News::latest()->paginate(2),
-            'cat' => News_category::latest()->paginate(20),
-            'featured' => News::where('status', 'Featured')->latest()->paginate(5),
-            'trending' => News::where('status', 'Trending')->latest()->paginate(5),
+            'semua' => News::latest()->paginate(6),
+            'cat' => News_category::latest()->take(20)->get(),
+            'featured' => News::where('status', 'Featured')->latest()->take(6)->get(),
+            'trending' => News::where('status', 'Trending')->latest()->take(6)->get(),
             'ads_land' => Ads::where('status', 'ON')->where('tipe', 'Landscape')->first(),
             'ads_square' => Ads::where('status', 'ON')->where('tipe', 'Square')->first(),
+            'jum_com' => News::where('id', $komen->news_id)->count()
         ]);
     }
-    public function news_single(News $news)
+    public function news_single(News $news, News_comment $komen)
     {
 
         $news->increment('views');
@@ -138,12 +138,32 @@ class MainController extends Controller
             'title' => 'News & Article',
             'navbar' => Company::all(),
             'recent' => News::latest()->paginate(2),
-            'trending' => News::where('status', 'Trending')->latest()->paginate(5),
+            'trending' => News::where('status', 'Trending')->take(6)->get(),
             'cat' => News_category::latest()->paginate(20),
-            'featured' => News::where('status', 'Featured')->latest()->paginate(5),
+            'featured' => News::where('status', 'Featured')->take(6)->get(),
             'data' => $news,
             'ads_land' => Ads::where('status', 'ON')->where('tipe', 'Landscape')->first(),
             'ads_square' => Ads::where('status', 'ON')->where('tipe', 'Square')->first(),
+            'comment' => News_comment::where('news_id', $news->id)->latest()->get(),
+            'jum_com' => News_comment::where('news_id', $news->id)->count()
+        ]);
+    }
+
+    public function news_category()
+    {
+
+        $data = News::latest()->filter(request(['search']))->paginate(2)->withQueryString();
+
+        return view('front_end/news/news-category', [
+            'title' => 'News & Article',
+            'navbar' => Company::all(),
+            'data' => $data,
+            // footer
+            'ads_land' => Ads::where('status', 'ON')->where('tipe', 'Landscape')->first(),
+            'ads_square' => Ads::where('status', 'ON')->where('tipe', 'Square')->first(),
+            'featured' => News::where('status', 'Featured')->take(6)->get(),
+            'cat' => News_category::latest()->take(20)->get(),
+            'trending' => News::where('status', 'Trending')->take(6)->get(),
         ]);
     }
 

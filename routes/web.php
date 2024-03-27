@@ -21,6 +21,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsCategoryController;
+use App\Http\Controllers\NewsCommentController;
 use App\Http\Controllers\Oasis_landing_page;
 
 /*
@@ -47,7 +48,10 @@ Route::get('/Our-Service/Warehousing-and-Logistic', [MainController::class, 'ser
 Route::get('/Our-Service/{service}', [MainController::class, 'services_single'])->middleware('guest');
 
 Route::get('/News-&-Article', [MainController::class, 'news'])->middleware('guest');
-Route::get('/News-&-Article/{news}', [MainController::class, 'news_single'])->middleware('guest');
+Route::get('/News-&-Article/category', [MainController::class, 'news_category'])->middleware('guest');
+Route::post('/News-&-Article/komen/{news}', [NewsCommentController::class, 'store'])->middleware('guest');
+Route::get('/News-&-Article/{news}', [MainController::class, 'news_single'])->middleware('guest')->name('news.show');
+
 
 Route::get('/Career', [MainController::class, 'career'])->middleware('guest');
 Route::get('/Apply-job/{career}', [MainController::class, 'career_apply'])->middleware('guest');

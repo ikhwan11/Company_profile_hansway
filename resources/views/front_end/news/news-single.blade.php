@@ -2,8 +2,31 @@
 @section('body')
 
 <!-- Breaking News Start -->
+
+
+
+
+
 <div class="container-fluid mt-5 mb-3 pt-3">
     <div class="container">
+
+        @if(session()->has('pesan'))
+        <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <span class="text-dark">{{ session('pesan') }}</span>
+            </div>
+        </div>
+        @endif
+        @if(session()->has('error'))
+        <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <span class="text-dark">{{ session('error') }}</span>
+            </div>
+        </div>
+        @endif
+
         <div class="row align-items-center">
             <div class="col-12">
                 <div class="d-flex justify-content-between">
@@ -46,13 +69,13 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <span class="ml-3"><i class="far fa-eye mr-2"></i>{{ $data->views }}</span>
-                            <span class="ml-3"><i class="far fa-comment mr-2"></i>123</span>
+                            <span class="ml-3"><i class="far fa-comment mr-2"></i>{{$jum_com}}</span>
                         </div>
                     </div>
                 </div>
                 <!-- News Detail End -->
 
-                <div class="col-lg-8 text-center text-lg-right">
+                <div class="col-lg-8 text-center text-lg-right mb-2">
                     @if($ads_land)
                     <a href="{{ $ads_land->link }}" target="_blank">
                         <img class="img-fluid" src="{{ asset('storage/' . $ads_land->image) }}" alt="">
@@ -67,47 +90,61 @@
                 <!-- Comment List Start -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">3 Comments</h4>
+                        <h4 class="m-0 text-uppercase font-weight-bold">{{$jum_com}} Comments</h4>
                     </div>
+                    @foreach($comment as $komen)
                     <div class="bg-white border border-top-0 p-4">
                         <div class="media mb-4">
-                            <img src="img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+                            <!-- <img src="img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;"> -->
                             <div class="media-body">
-                                <h6><a class="text-secondary font-weight-bold" href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum.</p>
+                                <h6><a class="text-secondary font-weight-bold" href="">{{$komen->name}} </a> <small><i>{{ date('M, d Y', strtotime($komen->created_at)) }}</i></small></h6>
+                                <p>{{$komen->komen}}</p>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
                 <!-- Comment List End -->
 
-                <!-- Comment Form Start -->
+                <!-- Belum buat fitur komen-->
                 <div class="mb-3">
                     <div class="section-title mb-0">
                         <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-4">
-                        <form>
+                        <form action="/News-&-Article/komen/{{$data->slug}}" method="post">
+                            @csrf
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="name">Name *</label>
-                                        <input type="text" class="form-control" id="name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email *</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <input class="form-control" type="hidden" id="news_id" name="news_id" value="{{$data->id}}">
+                                        <input class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Name.." id="name" name="name" value="{{old('name')}}">
+                                        @error('name')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                                <textarea class="form-control @error('komen') is-invalid @enderror" placeholder="Comment.." name="komen" id="komen"></textarea>
+                                @error('komen')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
+                            <div class="d-flex mb-2">
+                                {!! NoCaptcha::renderJs() !!}
+                                {!! NoCaptcha::display() !!}
+                            </div>
+
+                            @error('g-recaptcha-response')
+                            <p class="text-danger">{{ $message }}</p>
+                            @enderror
+
                             <div class="form-group mb-0">
                                 <input type="submit" value="Leave a comment" class="btn btn-primary font-weight-semi-bold py-2 px-3">
                             </div>
@@ -154,14 +191,16 @@
                     </div>
                     <div class="bg-white border border-top-0 p-3">
                         @foreach($trending as $trend)
+                        @php
+                        $num_char = 80;
+                        $text = $trend->title;
+                        @endphp
                         <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                            <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
                             <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                 <div class="mb-2">
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">#{{$trend->category}}</a>
                                     <a class="text-body" href=""><small>{{ date('M, d Y', strtotime($trend->created_at)) }}</small></a>
                                 </div>
-                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">{{$trend->title}}</a>
+                                <a class="h6 m-0 text-secondary" href="/News-&-Article/{{$trend->slug}}">{{substr($text, 0, $num_char) . '...'}}</a>
                             </div>
                         </div>
                         @endforeach

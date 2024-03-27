@@ -165,30 +165,19 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
                 <div class="m-n1">
-                    <a href="" class="btn btn-sm btn-secondary m-1">Politics</a>
+                    @foreach($cat as $category)
+                    <a href="" class="btn btn-sm btn-secondary m-1">{{$category->name}}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
                 <div class="row">
+                    @foreach($trending as $foto)
                     <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-1.jpg" alt=""></a>
+                        <img class="w-100" src="{{asset('storage/'.$foto->image)}}" alt="">
                     </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="{{asset('blog-templates')}}/img/news-110x110-1.jpg" alt=""></a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\News_category;
 
 class News extends Model
 {
@@ -16,18 +17,15 @@ class News extends Model
     {
         return $this->belongsTo(User::class, 'id_user');
     }
-    protected function views()
-    {
-        return $this->hasMany(Post_view::class, 'post_id');
-    }
-    protected function category()
-    {
-        return $this->belongsTo(News_category::class, 'category');
-    }
 
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function comment()
+    {
+        return $this->hasMany(News_comment::class, 'news_id');
     }
 
     public function scopeFilter($query, array $filters)
@@ -35,7 +33,8 @@ class News extends Model
 
         $query->when($filters['search'] ?? false, function ($query, $search) {
             return $query->where('title', 'like', '%' . $search . '%')
-                ->orWhere('body', 'like', '%' . $search . '%');
+                ->orWhere('body', 'like', '%' . $search . '%')
+                ->orWhere('category', 'like', '%' . $search . '%');
         });
     }
 }

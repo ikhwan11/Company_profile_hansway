@@ -27,7 +27,7 @@
             <!-- kolom pencarian -->
             <div class="row">
                 <div class="col-md-6">
-                    <form action="/News-and-article">
+                    <form action="/News-&-Article">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Search.." name="search" autofocus>
                             <button class="btn btn-warning" type="submit"><i class="fas fa-search"></i></button>
