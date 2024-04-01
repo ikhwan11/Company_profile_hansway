@@ -117,7 +117,7 @@ class MainController extends Controller
         return view('front_end/news/news-and-article', [
             'title' => 'News & Article',
             'navbar' => Company::all(),
-            'hot' => News::where('category', 'hot-topic')->latest()->take(3)->get(),
+            'hot' => News::where('status', 'Featured')->latest()->take(3)->get(),
             'data_atas' => News::latest()->take(4)->get(),
             'image' => Page::find(5),
             'semua' => News::latest()->paginate(6),

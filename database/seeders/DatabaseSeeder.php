@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
     {
         // users
         User::create([
-            'name' => 'Admiansyah',
+            'name' => 'Ikhwan',
             'email' => 'admin@gmail.com',
             'jabatan' => 'Web Developer',
             'no_hp' => '089766544343',
@@ -67,44 +67,6 @@ class DatabaseSeeder extends Seeder
 
             'image' => 'about-images/XUeJ4g5DT9087Kh5zd8uJFwDa3yFyUtGL9bTpOV6.jpg',
 
-
-        ]);
-
-        // career
-        Career::create([
-            'position' => 'Clinic Manager / Manager Operasional Ekles Clinic Aesthetic & Laser',
-            'slug' => 'clinic-manager-or-manager-operasional-ekles-clinic-aesthetic-and-laser',
-
-            'qualification' => '<div><strong>Keuntungan</strong></div><ul><li>BPJS Kesehatan dan Ketenagakerjaan</li><li>Gaji Pokok dan komisi</li><li>Asuransi JSHK</li></ul><div><br></div><div>Deskripsi Pekerjaan</div><div><strong>EKLES CLINIC Aesthetic &amp; Laser</strong> sebagai salah satu klinik kecantikan yang berkembang pesat, terlengkap dan terkenal di kawasannya, saat ini kami adalah perusahaan yang menuju 100 cabang di Indonesia membuka kesempatan bagi anda untuk berkarir bersama kami untuk posisi sebagai :</div><div><strong>Clinic Manager / Manager Operasional<br></strong><br></div><div><strong>Persyaratan :</strong></div><ul><li>Usia Maksimal 40 Tahun</li><li>Memiliki pengalaman minimal 1 Tahun dibidang managerial</li><li>Berpenampilan rapi dan sopan</li><li>Jujur, beretetika, pekerja keras baik dalam berkomunikasi lisan maupun verbal</li><li>Latar pendidikan minimal D3/S1</li><li>Mampu melakukan riset, evaluasi dan menyusun strategi untuk pengembangan klinik</li><li>Menguasai microsoft office khususnya power point, word dan excel</li><li>Dapat bekerja cepat baik secara individu mauppun team</li><li>Memiliki pemahaman dalam bidang delegasi</li><li>Mampu memberikan analisa dan presentasi yang baik</li><li>Bersedia mengikuti pelatihan/training.</li></ul><div><br></div><div><strong>Benefit :</strong></div><ul><li>Gaji Pokok</li><li>Komisi individu</li><li>Komisi Pencapaian</li><li>BPJS Kesehatan</li><li>BPJS Tenagakerja</li></ul>',
-
-            'salary_offer' => '50.000.000',
-
-        ]);
-        Career::create([
-            'position' => 'Operator Produksi',
-            'slug' => 'operator-produksi',
-
-            'qualification' => '<div><strong>Kualifikasi :</strong></div><ul><li>Kewarganegaraan Indonesia (WNI)</li><li>Umur maksimal 24 tahun</li><li>Pria dan wanita</li><li>Pengalaman dan Non pengalaman</li><li>Yang memiliki pengalaman di utamakan</li><li>Tinggi badan Ideal</li><li>Siap penempatan kerja di batam</li></ul><div><br><strong>Deskripsi Pekerjaan :</strong></div><ul><li>Rapat Dan Mempersiapkan Material</li><li>Mengoperasikan Mesin Produksi</li><li>Setting Program Pada Mesin.</li><li>Menjaga Produktivitas Produksi</li><li>Menjaga Kualitas Produksi</li><li>Memastikan Produk Sampai Ke Proses Selanjutnya</li><li>Menjaga Media Kerja</li><li>Bekerja Sesuai Target</li></ul><div><br><strong>Berkas Lamaran :</strong></div><ul><li>Surat lamaran</li><li>Daftar riwayat hidup</li><li>Foto copy Ijazah/ STTB pendidikan terakhir</li><li>Foto copy SKCK dari Kepolisian yang masih berlaku</li><li>Foto copy e-KTP</li><li>Surat Keterangan Sehat dari Dokter yang terbaru</li><li>Foto copy kartu tanda pencari kerja</li><li>Pas photo terbaru ukuran 4 x 6</li><li>Memiliki NPWP</li></ul><div><br><strong>Note :</strong></div><ul><li>Hanya pelamar yang terpilih dan sesuai kualifikasi yang akan dipanggil mengikuti seleksi berikutnya. Lowongan kerja terbuka sampai kuota terpenuhi.</li><li>Hati-hati terhadap segala bentuk jenis penipuan karena sejatinya pendaftaran lowongan pekerjaan itu gratis tidak ada biaya dalam bentuk apapun.</li></ul>',
-
-            'salary_offer' => '20.000.000',
-
-        ]);
-        Career::create([
-            'position' => 'Staff Admin',
-            'slug' => 'staff-admin',
-
-            'qualification' => '<div>Pendidikan Minimal SMP, SMA/k sederajat<br><br>Bertanggung Jawab Terhadap Pekerjaan<br><br>Pria / Wanita Usia Maksimal 42 tahun<br><br>Pengalaman / Non Pengalaman<br><br>Siap Memajukan Perusahaan<br><br>Boleh berjilbab / berkacamata<br><br>Bisa Bekerja dalam team<br><br>Sopan, Elegan Jujur<br><br>Displin dalam Kerja<br><br>Fasilitas<br><br>Gaji Pokok 4,2jt s/d 6,5jt/bln (negotiable sesuai posisi)<br><br>Transportasi + harian 80rb / hari<br><br>Mess / Transport / Jemputan<br><br>Seragam, Bonus + Shifting<br><br>Jaminan kesehatan BPJS<br><br>Lembur Normative<br><br>Premi Kehadiran<br><br>FASILITAS Full</div>',
-
-            'salary_offer' => '10.000.000',
-
-        ]);
-        Career::create([
-            'position' => 'LCIR OFFICER SENIOR',
-            'slug' => 'lcir-officer-senior',
-
-            'qualification' => '<div>Deskripsi kerja :</div><ul><li>Graduation form Bachelor Degree of LAW,</li><li>Experience in Industrial Relation (IR) and same field at least 1 year,</li><li>Understanding labor regulations,</li><li>Good communication skills,</li><li>Fluent in English, spoken and written,</li><li>Good Computer skill min Microsoft Office.</li></ul>',
-
-            'salary_offer' => '90.000.000',
 
         ]);
 
@@ -245,47 +207,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'sliders-images/Bixc2B8tWFdBtOLaaF57D1mVzT7oYfl6RmiVUupR.jpg',
         ]);
 
-        // Client
-        Client::create([
-            'name_client' => 'Mychlin Express Offshore Singapore',
-            'image' => 'client-logo/zaeCNK1Pw4ZTjf6wbeAr6jIVwmWJsRMkCPorQ7nB.png'
-        ]);
-        Client::create([
-            'name_client' => 'PT PAL Indonesia',
-            'image' => 'client-logo/maUbZOy6CvUPVjehr0FfTgW1HwbCtRDrz8vhFHEJ.png'
-        ]);
-        Client::create([
-            'name_client' => 'Pelindo Indonesia',
-            'image' => 'client-logo/mkflWUg6c52ka9A5qOQ4KgwL8dfI68mF8ebZCkPg.png'
-        ]);
-        Client::create([
-            'name_client' => 'Hansway International',
-            'image' => 'client-logo/7Bgcf42N3IUxZZ7ZDwAwEB0V7FaDZlbohqyO0bCC.png'
-        ]);
-        Client::create([
-            'name_client' => 'Samudera Tujuh',
-            'image' => 'client-logo/zaeCNK1Pw4ZTjf6wbeAr6jIVwmWJsRMkCPorQ7nB.png'
-        ]);
-        Client::create([
-            'name_client' => 'Widi Jasa Express',
-            'image' => 'client-logo/LaKogvHetDt5Y4ePVo0OdMsMssQoIiNRmXNd0Sgd.png'
-        ]);
-        Client::create([
-            'name_client' => 'Widi jasa samudera',
-            'image' => 'client-logo/CNo2yKYGQFNH6UmwwuRen4W3PGrd5hjJBLIarHcd.png'
-        ]);
-        Client::create([
-            'name_client' => 'Raja Poros Maritime',
-            'image' => 'client-logo/2lQadCb1tjeo0hR5kMVwk9sVGnhRtdgqKs1pmpoM.png'
-        ]);
-        Client::create([
-            'name_client' => 'Kreasi Wisata',
-            'image' => 'client-logo/CR1n1bCsbfIFW3WdZ60HXrpv8Zsu6VggPYbTIizH.png'
-        ]);
-        Client::create([
-            'name_client' => 'Sukses Personalia Samudera',
-            'image' => 'client-logo/ZTZQBIM38itqk6ATmVgEMMspHWvpWesDTin16Bho.png'
-        ]);
+
 
 
 
@@ -363,120 +285,8 @@ class DatabaseSeeder extends Seeder
             'image' => 'company-logo/x3g21F2o54BONsT6XbsbLDNZFbAmENwQMcQnXu0Z.png'
         ]);
 
-        News::create([
-            'id_user' => '1',
-            'title' => 'Hansway Indonesia Groups Annual Gathering: Fostering Unity through Connect, Communicate, and Collaborate',
+        // category news
 
-            'slug' => 'hansway-indonesia-groups-annual-gathering:-fostering-unity-through-connect,-communicate,-and-collaborate',
-
-            'source' => '',
-            'category' => 'hansway-indonesia-group',
-            'image' => 'News-images/FHd0ajanO8aWPlbkxVXeIdcrqRwC3HSSXLEeBDuv.jpg',
-            'excerpt' => 'On December 9, 2023, Hansway Indonesia Group held an annual event, namely a company gathering, which lasted for 2 days from December 9 to 10, 2023, at Harris Resort Marina, Batam. The focus of this ev...',
-
-            'body' => '<div><strong>On December 9, 2023</strong>, Hansway Indonesia Group held an annual event, namely a company gathering, which lasted for 2 days from December 9 to 10, 2023, at Harris Resort Marina, Batam. The focus of this event revolves around the concept of 3C, emphasizing the importance of connecting, communicating, and collaborating. The event was held to strengthen relations between employees from various subsidiaries that are members of the Hansway Indonesia Group’s, including: &nbsp;<br><br></div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Hansway Indoensia</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Widi Jasa Samudera</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Samudera Tujuh</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Hansway International</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Hansway Safetindo Bahari</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Elmount Logistik Nusantara</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Dian Kosmopolitan</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PT. Kreasi Wisata Impian Tour &amp; Travel</div><div>·&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Big House Hotel &amp; Pagi Sore Hotel<br><br></div><div>The event started in the morning at 8 a.m. on Saturday, December 9, 2023, where all Hansway Indonesia Group employees gathered and chatted with each other. One of the Hansway Indonesia Group employees said, "This event is eagerly awaited and is held once a year. I was surprised there were so many new faces in this company."<br><br>he event started by playing various very exciting games organized by event officers from Harris Resort, where the aim of each game was to build solidarity, cooperation, communication, and teamwork. In accordance with the theme promoted by the Hansway Indonesia Group.<br><br></div><div>Not only that, the event was continued by holding a joint dinner between employees and also the employees family members themselves, as well as various unique performances such as dancing, drama, and singing performed by Hansway Indonesia Group employees. Apart from that, Hansway Indonesia Group also distributed free lucky draws with hundreds of attractive prizes for Hansway Indonesia Group employees, ranging from cash to various grand prizes such as TVs, smartphones, and many more.<br><br></div><div>Most employees said that events like this should continue to be held because they can establish communication between company employees under the auspices of the Hansway Indonesia Group so that solidarity and cooperation between companies can be established.&nbsp;</div>',
-
-            'status' => ''
-
-        ]);
-
-        News::create([
-            'id_user' => '1',
-            'title' => 'PIS Strengthens Global Role with Two of the Worlds Largest Environmentally Friendly Gas Tankers, Indonesia Prepares to Take the World Market Further',
-
-            'slug' => 'pis-strengthens-global-role-with-two-of-the-worlds-largest-environmentally-friendly-gas-tankers,-indonesia-prepares-to-take-the-world-market-further',
-
-            'source' => 'https://www.idntimes.com/business/economy/amara-zahra/pis-tambah-dua-kapal-tanker-gas-ramah-lingkungan?page=all',
-            'category' => 'industry-news',
-            'image' => 'News-images/mlbN9zs861Nn5MLFDdjBK0euLBZ3XJmGwTwRFYym.jpg',
-            'excerpt' => 'On Tuesday, January 9, 2024, PT Pertamina International Shipping (PIS), in collaboration with a global energy trading company (BGN), inaugurated two giant gas tankers (VLGC) made in South Korea that a...',
-
-            'body' => '<div><br>On Tuesday, January 9, 2024, PT Pertamina International Shipping (PIS), in collaboration with a global energy trading company (BGN), inaugurated two giant gas tankers (VLGC) made in South Korea that are very environmentally friendly, named VLGC Pertamina Gas Tulip and VLGC Pertamina Gas Bergenia, which are optimized to transport LPG both domestically and internationally.<br><br>Tulips and Bergenia were chosen because they have unique meanings for PIS and BGN. Tulip symbolizes majesty, and Bergenia symbolizes strength. The PIS fleet now totals 97 vessels, including 61 tankers operating overseas.<br><br></div><div>“We plan to add 6 VLGCs in 2024, starting with 2 VLGCs in the beginning of the year, which will also strengthen PIS position in the global LPG transportation business.” Yoki, PIS Chief Executive Officer.<br><br></div><div>One of the main advantages of the VLGC Pertamina Gas Bergenia and VLGC Pertamina Gas Tulip is that the vessels are environmentally friendly as they have two dual fuel tanks that maximize the use of gas and low-sulfur fuel. In addition, VLGC Pertamina Gas Bergenia and VLGC Pertamina Gas Tulip have the latest technology that allows for more efficient use of fuel, increasing vessel speed by up to 16 percent.<br><br></div><div>“The presence of these two VLGC vessels will certainly improve Pertamina Groups ability to secure energy supplies to support national energy security. Their cutting-edge technology is proof of Pertamina Groups commitment to sustainable business.” said Pertamina CEO Nicke Widyawati in a written statement on Monday, January 15, 2024.<br><br></div><div>With the presence of these two giant gas tankers, PIS has increased its expansion routes to the global market, from initially having only 11 international routes in 2021 to now increasing to 50 routes.&nbsp;</div>',
-
-            'status' => ''
-
-        ]);
-        News::create([
-            'id_user' => '1',
-            'title' => 'Startling! Batam Shipping Industry Company Turns Out to be Experiencing a Labor Crisis: Companies are Still Having Difficulty Finding Skilled Workers',
-
-            'slug' => 'startling!-batam-shipping-industry-company-turns-out-to-be-experiencing-a-labor-crisis:-companies-are-still-having-difficulty-finding-skilled-workers',
-
-            'source' => 'https://www.rri.co.id/daerah/518431/waduh-tenaga-untuk-industri-perkapalan-masih-kurang',
-            'category' => 'hot-topic',
-            'image' => 'News-images/zJueWLLehT2UTCIhzo9To64dzXKflCqUbzW5E3Av.jpg',
-            'excerpt' => 'Batam shipping businesses are still short of skilled employees, despite many orders for boat work and repairs. They need more employees with the necessary skills to complete this work.According to Mar...',
-
-            'body' => '<div>Batam shipping businesses are still short of skilled employees, despite many orders for boat work and repairs. They need more employees with the necessary skills to complete this work.<br><br></div><div>According to Mariati Bangun, Secretary of Ikatan Pengusaha Perkapalan &amp; Lepas Pantai Indonesia (IPERINDO) Kepri, continues to require employees with the right qualifications. They will even continue to contact subcontractors and work together with welding training centers in order to hire qualified workers.<br><br></div><div>According to Mariati, even though it has absorbed many employees and even brought in employees from outside batam, there are still not enough employees with the special skills needed. “orders are still yesterdays orders, orders are still running, but we cant finish because we still lack employees, so shipping friends say the project delay is because there is not enough labor. From our friends, we have also cooperated with training institutions; taking labor from outside batam is also applied but in accordance with the class of shipyard, there is nothing”<br><br></div><div>This shortage of employees has almost occurred in less than a year. At the beginning of 2023, Ali Ulai, chairman of IPERINDO Kepri, admitted that in order to complete the ship orders that have increased since the end of 2022, he needs thousands of workers. “We still need welders; those from Java island have also been taken, but now its mostly G3 welders. The G3 class is usually for welding such as doors and trellises; what is really needed now is G5 and G6 for welding ships. The government must be responsive in training workers in that section. I feel sorry for those who are still unemployed in Indonesia.”<br><br></div><div>Currently, there are more than 250 shipyards in Indonesia, most of which are located in Batam, and they build various types of vessels ranging from passenger ships, cargo ships, and special-purpose vessels. Shipyards across Indonesia have the largest docking graving facilities, at 300,000 dead weight tons (DWT).&nbsp;</div>',
-
-            'status' => ''
-
-        ]);
-        News::create([
-            'id_user' => '1',
-            'title' => 'The First Fully Electric Tug Delivered to Crowley by the United States',
-
-            'slug' => 'the-first-fully-electric-tug-delivered-to-crowley-by-the-united-states',
-
-            'source' => 'https://www.maritime-executive.com/article/u-s-s-first-fully-electric-tug-delivered-to-crowley',
-            'category' => 'economy',
-            'image' => 'News-images/hll45xkCDsKPPc0TBrxZFZ1YYR5RLLhRfjlSwPiH.jpg',
-            'excerpt' => 'On January 24, Crowley announced that he had approved the first delivery of a fully electric tugboat made in the United States. Now, the vessel that San Diego port officials called a "game changer" wh...',
-
-            'body' => '<div>On January 24, Crowley announced that he had approved the first delivery of a fully electric tugboat made in the United States. Now, the vessel that San Diego port officials called a "game changer" when it was ordered in 2021 will complete final tests and be delivered to California when it is expected to enter service in early summer.<br><br></div><div>The tug, named eWolf, was built in collaboration with Crowley, which owns and operates the vessel, as well as federal, state, and local government partners. The tug was built by Master Boat Builders at its shipyard in Coden, Alabama, with Crowley Engineering Services handling on-site construction.<br><br></div><div>When the ship is delivered in July 2021, Croley emphasized that the ships design will allow it to operate entirely on electric power with full performance and zero emissions. With a storage capacity of six megawatt-hours, eWolf can operate for a full day. The vessel has two generators on board for backup and longer transit. During its first ten years of operation, the vessel is expected to reduce NOx emissions by 178 tons and CO2 by 3,100 metric tons. Each year, modern tugs consume more than 30,000 gallons of diesel fuel.<br><br></div><div>"The eWolf demonstrates where the maritime industry can go, in terms of both innovation and sustainability, with solid partnerships between owners, designers, suppliers, and shipyards," said Garrett Rice, president of Master Boat Builders. "We are proud to have partnered with Crowley in the construction of the eWolf and look forward to seeing her at work in San Diego very soon."&nbsp;<br><br></div><div>Crowley reports work is also underway to complete the microgrid shoreside charging station at the Port of San Diego to support the vessel’s operations.&nbsp;<br><br></div><div>The growing trend of using battery and electric propulsion for harbor and inland shipping vessels is supported by this new tug. Last year, Kirby Inland Marine ordered the first hybrid electric inland tug in the United States. New Zealand, Canada, and China are also already using electric tugs, and for some customers, Turkish shipyards have already started building. Last October, the Port of Antwerp-Bruges announced that it had ordered Europes first electric tugboat.&nbsp;</div>',
-
-            'status' => ''
-
-        ]);
-        News::create([
-            'id_user' => '1',
-            'title' => 'Bapenda Kepri Intensively Collects Heavy Equipment Tax to Reach Target of IDR 4.2 Billion',
-
-            'slug' => 'bapenda-kepri-intensively-collects-heavy-equipment-tax-to-reach-target-of-idr-4.2-billion',
-
-            'source' => 'https://metro.batampos.co.id/bapenda-target-kumpulkan-pajak-alat-berat-rp-42-miliar',
-            'category' => 'hot-topic',
-            'image' => 'News-images/mpDKsvvZh25hVGrs6B4QOMldb0bDh2fqRqDxfgvi.jpg',
-            'excerpt' => 'Since January 5, 2024, the Regional Revenue Agency (Bapenda) of Riau Islands Province (Kepri) has started collecting heavy equipment tax and is targeted to reach Rp 4.2 billion in revenue in 2024.&nbs...',
-
-            'body' => '<div>Since January 5, 2024, the Regional Revenue Agency (Bapenda) of Riau Islands Province (Kepri) has started collecting heavy equipment tax and is targeted to reach Rp 4.2 billion in revenue in 2024.&nbsp;<br><br></div><div>Diky Wijaya, Head of Bapenda Kepri, said that currently there are around 3,000 pieces of heavy equipment recorded throughout the Riau Islands. Of that number, most are in Batam City. "The heavy equipment tax rate is still the same as before, which is 0.2%," said Diky on Wednesday (31/1).<br><br></div><div>The Riau Islands Provincial Government continues to make every effort to maximize the potential of local taxes to increase regional revenue. Local taxes are one of the pillars of regional development and the economy.<br><br></div><div>"This year we will lead to digitalization; later, together with the Ministry of Home Affairs and the Traffic Corps (korlantas), we will make new innovations to make it easier for people to pay taxes," said Diky.<br><br></div><div>Previously, UPT Samsat Batuaji stated that they had recorded heavy equipment operating in business and industrial areas in Batuaji and Sagulung.<br><br></div><div>Patrick Nababan, head of UPT Samsat Batuaji, said that so far, 493 pieces of heavy equipment have been recorded, mostly those operating in the shipyard industrial area.<br><br></div><div>"Since 2023, officers have continued to move to collect data from companies. 34 companies have been visited, and a total of 493 heavy vehicles have been recorded," said Patrick.<br><br></div><div>This heavy equipment data collection is in accordance with the direction of Law No. 1 of 2022 concerning Financial Relations between the Central Government and Regional Governments (HKPD), one of which is the new tax on heavy equipment.&nbsp;</div>',
-
-            'status' => ''
-
-        ]);
-        News::create([
-            'id_user' => '1',
-            'title' => 'Kabupaten Karimun Belum Mampu Raih Adipura Kencana',
-
-            'slug' => 'kabupaten-karimun-belum-mampu-raih-adipura-kencana',
-
-            'source' => 'https://www.batamnews.co.id/berita-109784-kabupaten-karimun-belum-mampu-raih-adipura-kencana.html',
-            'category' => 'hot-topic',
-            'image' => 'News-images/pByi6Q28ed4a0zw6ynCGuUxmImLBMXeKIppDEn2k.jpg',
-            'excerpt' => 'Karimun, Batamnews - Kabupaten Karimun belum berhasil meraih penghargaan Adipura Kencana, meskipun telah menunjukkan upaya dan komitmen yang kuat dalam bidang kebersihan lingkungan. Hal ini diketahui...',
-
-            'body' => '<div><strong>Karimun, Batamnews</strong> - Kabupaten Karimun belum berhasil meraih penghargaan Adipura Kencana, meskipun telah menunjukkan upaya dan komitmen yang kuat dalam bidang kebersihan lingkungan. Hal ini diketahui setelah hasil penilaian yang dilakukan belum lama ini.<br><br></div><div>Adipura Kencana merupakan penghargaan tertinggi dalam bidang kebersihan lingkungan yang bisa diraih setelah kabupaten atau kota meraih Adipura Kirana atau setelah mendapat empat kali Adipura berturut-turut. Kabupaten Karimun sebelumnya telah berhasil meraih Adipura secara berturut-turut pada tahun 2017, 2018, 2019, dan 2022.<br><br></div><div>Pada tahun 2023, Pemerintah Kabupaten Karimun telah menargetkan untuk meraih Adipura Kencana dan melakukan berbagai persiapan untuk mencapai target tersebut.&nbsp;<br><br></div><div>Namun, pada penilaian Adipura tahun 2023, Kabupaten Karimun hanya mampu meraih sertifikat Adipura. Sertifikat tersebut diterima langsung oleh Wakil Bupati Karimun, Anwar Hasyim di Gedung Manggala Wanabakti KLHK.<br><br></div><div>"Bukan gagal tapi nilainya turun sehingga kita hanya dapat penghargaan sertifikat Adipura," kata Kepala Dinas Lingkungan Hidup (DLH) Kabupaten Karimun, Rita Agustina, Rabu, 6 Maret 2024.<br><br></div><div>Beliau juga menambahkan bahwa meraih Adipura Kencana tidak mudah, mengingat hanya beberapa kota seperti Surabaya, Balikpapan, Bontang, Bitung, dan Ciamis yang berhasil meraihnya.<br><br></div><div>"Adipura kencana itu tidak mudah, kemarin hanya 5 kota yang dapat, antaranya Surabaya, Balikpapan, Bontang, Bitung, san Ciamis," ujar nya.<br><br>Sebelumnya, Pemerintah Kabupaten Karimun menargetkan perolehan penghargaan tertinggi di bidang kebersihan lingkungan berupa Piala Adipura Kencana.<br><br></div><div>Target ini bisa diraih Kabupaten Karimun, apabila tahun 2023 ini kembali bisa meraih penghargaan dalam bidang kebersihan tersebut untuk kelima kalinya secara berturut-turut.<br><br></div><div>Dalam mewujudkan target tersebut, segala persiapan telah dilakukan oleh Pemerintah Kabupaten Karimun dengan melakukan pembersihan di lokasi-lokasi yang akan dinilai, salah satunya Pasar Puan Maimun.<br><br></div><div>Serta juga melibatkan unsur masyarakat untuk melakukan gotong royong bersih-bersih di setiap tempat masing-masing.<br><br></div>',
-
-            'status' => ''
-
-        ]);
-
-        News_category::create([
-            'name' => 'Hot Topic',
-            'slug' => 'hot-topic'
-        ]);
-        News_category::create([
-            'name' => 'Hansway Indonesia Group',
-            'slug' => 'hansway-indonesia-group'
-        ]);
-
-        News_category::create([
-            'name' => 'Industry News',
-            'slug' => 'industry-news'
-        ]);
-        News_category::create([
-            'name' => 'Economy',
-            'slug' => 'economy'
-        ]);
+        // News
     }
 }

@@ -67,6 +67,62 @@
             object-fit: fill;
             border-radius: 50%;
         }
+
+        /* floating bttn */
+        .btn-floating {
+            position: fixed;
+            right: 25px;
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            border: 0;
+            z-index: 9999;
+            color: white;
+            transition: .2s;
+        }
+
+        .btn-floating:hover {
+            width: auto;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .btn-floating span {
+            font-size: 16px;
+            margin-left: 5px;
+            transition: .2s;
+            line-height: 0px;
+            display: none;
+        }
+
+        .btn-floating:hover span {
+            display: inline-block;
+        }
+
+        .btn-floating:hover img {
+            margin-bottom: -3px;
+        }
+
+        .btn-floating.whatsapp {
+            bottom: 25px;
+            background-color: #34af23;
+            border: 2px solid #fff;
+        }
+
+        .btn-floating.whatsapp:hover {
+            background-color: #1f7a12;
+        }
+
+        .btn-floating.facebook {
+            bottom: 85px;
+            background-color: #1876f3;
+            border: 2px solid #fff;
+        }
+
+        .btn-floating.facebook:hover {
+            background-color: #1876f3;
+        }
     </style>
 </head>
 
@@ -319,42 +375,12 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.009142133563!2d104.0003746919628!3d1.1539593222365339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98a23810bd189%3A0x87f4647174aa3225!2sPT.Hansway%20Indonesia%20%7CJasa%20Steel%20Work%7CKeagenan%20Ship%7CSupply%20Jasa%7CShip%20Chandler%20Batam%20-%20MGO%2Cprovisions%20%26%20Ship%20spares%7CLSA%20%26%20FFA!5e0!3m2!1sen!2sid!4v1708499142890!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-        <!-- whatsapp -->
-        <!--Use the below code snippet to provide real time updates to the live chat plugin without the need of copying and paste each time to your website when changes are made via PBX-->
-        <call-us-selector phonesystem-url="https://1429.3cx.cloud" party="hanswayindonesia"></call-us-selector>
-
-        <!--Incase you don't want real time updates to the live chat plugin when options are changed, use the below code snippet. Please note that each time you change the settings you will need to copy and paste the snippet code to your website-->
-        <!--<call-us 
- phonesystem-url="https://1429.3cx.cloud" 
- style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;--call-us-main-accent-color:#D63004;--call-us-main-background-color:#FFFFFF;--call-us-plate-background-color:#D97E18;--call-us-plate-font-color:#E6E6E6;--call-us-main-font-color:#292929;--call-us-agent-bubble-color:#29292910;right: 20px; bottom: 20px;" 
- id="wp-live-chat-by-3CX" 
- minimized="false" 
- animation-style="slidefromside" 
- party="hanswayindonesia" 
- minimized-style="bubbleright" 
- allow-call="false" 
- allow-video="false" 
- allow-soundnotifications="true" 
- enable-mute="true" 
- enable-onmobile="true" 
- offline-enabled="true" 
- enable="true" 
- ignore-queueownership="false" 
- authentication="both" 
- show-operator-actual-name="true" 
- aknowledge-received="true" 
- gdpr-enabled="false" 
- message-userinfo-format="both" 
- message-dateformat="both" 
- lang="en" 
- button-icon-type="doublebubble" 
- greeting-visibility="none" 
- greeting-offline-visibility="none" 
- chat-delay="2000" 
- enable-direct-call="false" 
- enable-ga="false" 
- ></call-us>-->
-        <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+        <a href="https://api.whatsapp.com/send?phone=628161111699" target="_blank">
+            <button class="btn-floating whatsapp">
+                <img src="{{asset('front_templates')}}/icons/wa.png" alt="WhatsApp Us" width="40px">
+                <span>WhatsApp Us</span>
+            </button>
+        </a>
 
 
         <footer id="footer" class="footer footer-1">
@@ -474,22 +500,6 @@
             </div><!-- /.container -->
         </footer><!-- /.Footer -->
 
-        <!-- <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button> -->
-        <!-- <div class="floatingButtonWrap">
-            <div class="floatingButtonInner">
-                <a href="#" class="floatingButton">
-                    <i class="fa-solid fa-comments"></i>
-                </a>
-                <ul class="floatingMenu">
-                    <li>
-                        <a href="#"><i class="fa-brands fa-whatsapp text-white whatsapp"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-regular fa-envelope text-white mail"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
 
         <div class="module__search-container">
             <i class="fa fa-times close-search"></i>

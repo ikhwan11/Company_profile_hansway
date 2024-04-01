@@ -23,6 +23,64 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('blog-templates')}}/css/style.css" rel="stylesheet">
+
+    <style>
+        /* floating bttn */
+        .btn-floating {
+            position: fixed;
+            right: 25px;
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            border: 0;
+            z-index: 9999;
+            color: white;
+            transition: .2s;
+        }
+
+        .btn-floating:hover {
+            width: auto;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        .btn-floating span {
+            font-size: 16px;
+            margin-left: 5px;
+            transition: .2s;
+            line-height: 0px;
+            display: none;
+        }
+
+        .btn-floating:hover span {
+            display: inline-block;
+        }
+
+        .btn-floating:hover img {
+            margin-bottom: -3px;
+        }
+
+        .btn-floating.whatsapp {
+            bottom: 25px;
+            background-color: #34af23;
+            border: 2px solid #fff;
+        }
+
+        .btn-floating.whatsapp:hover {
+            background-color: #1f7a12;
+        }
+
+        .btn-floating.facebook {
+            bottom: 85px;
+            background-color: #1876f3;
+            border: 2px solid #fff;
+        }
+
+        .btn-floating.facebook:hover {
+            background-color: #1876f3;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,13 +103,10 @@
                             <a class="nav-link text-body small" href="#">{{$dt->format('l, M, d Y')}}</a>
                         </li>
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Advertise</a>
-                        </li>
-                        <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" href="#">Contact</a>
+                            <a class="nav-link text-body small" href="/Contact-us">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body small" href="#">Login</a>
+                            <a class="nav-link text-body small" href="/login">Login</a>
                         </li>
                     </ul>
                 </nav>
@@ -60,10 +115,10 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-auto mr-n2">
                         <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-linkedin-in"></small></a>
+                            <a class="nav-link text-body" href="https://www.linkedin.com/company/31341198"><small class="fab fa-linkedin-in"></small></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body" href="#"><small class="fab fa-instagram"></small></a>
+                            <a class="nav-link text-body" href="https://www.instagram.com/hanswayindonesia/"><small class="fab fa-instagram"></small></a>
                         </li>
                     </ul>
                 </nav>
@@ -136,6 +191,13 @@
     <!-- Navbar End -->
 
     @yield('body')
+
+    <a href="https://api.whatsapp.com/send?phone=628161111699" target="_blank">
+        <button class="btn-floating whatsapp">
+            <img src="{{asset('front_templates')}}/icons/wa.png" alt="WhatsApp Us" width="40px">
+            <span>WhatsApp Us</span>
+        </button>
+    </a>
     <!-- Footer Start -->
     <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
         <div class="row py-4">
@@ -146,8 +208,8 @@
                 <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>inquiry@hanswayindonesia.com</p>
                 <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
                 <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <script type="IN/FollowCompany" data-id="31341198" data-counter="bottom"></script>
+                    <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="https://www.instagram.com/hanswayindonesia/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -204,6 +266,11 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('blog-templates')}}/js/main.js"></script>
+
+    <!-- linkedin plugin -->
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+        lang: en_US
+    </script>
 </body>
 
 </html>
