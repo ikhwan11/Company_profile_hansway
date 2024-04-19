@@ -271,6 +271,40 @@
     <script src="https://platform.linkedin.com/in.js" type="text/javascript">
         lang: en_US
     </script>
+
+    <script>
+        // Function to extract search term from URL
+        function getSearchTerm() {
+            // Get the current URL
+            var url = window.location.href;
+            // Split the URL by '?' to get the query string
+            var queryString = url.split('?')[1];
+            if (queryString) {
+                // Split the query string by '&' to get individual parameters
+                var params = queryString.split('&');
+                // Loop through the parameters to find the 'search' parameter
+                for (var i = 0; i < params.length; i++) {
+                    var param = params[i].split('=');
+                    // If the parameter key is 'search'
+                    if (param[0] === 'search') {
+                        // Decode the URI component to handle special characters
+                        var searchTerm = decodeURIComponent(param[1]);
+                        // Replace plus and dash signs with spaces
+                        searchTerm = searchTerm.replace(/\+/g, ' ').replace(/-/g, ' ');
+                        return searchTerm;
+                    }
+                }
+            }
+            return null; // Return null if search term is not found
+        }
+
+        // Get the search term
+        var searchTerm = getSearchTerm();
+        // Display the search term in the HTML
+        if (searchTerm) {
+            document.getElementById('searchTerm').textContent = searchTerm;
+        }
+    </script>
 </body>
 
 </html>

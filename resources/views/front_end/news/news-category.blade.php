@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Category:</h4>
+                            <h4 class="m-0 text-uppercase font-weight-bold">Category: <span id="searchTerm" class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"></span> </h4>
                         </div>
                     </div>
 

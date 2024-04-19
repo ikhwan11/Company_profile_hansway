@@ -939,6 +939,13 @@
                 </button>
             </a>
 
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-top: 50px;">
+                        <h1>Sales Gallery <br><strong style="color:#ffbd59;"> Cluster Oasis Mas</strong></h1><br>
+                    </div>
+                </div>
+            </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.009142133563!2d104.0003746919628!3d1.1539593222365339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98a23810bd189%3A0x87f4647174aa3225!2sPT.Hansway%20Indonesia%20%7CJasa%20Steel%20Work%7CKeagenan%20Ship%7CSupply%20Jasa%7CShip%20Chandler%20Batam%20-%20MGO%2Cprovisions%20%26%20Ship%20spares%7CLSA%20%26%20FFA!5e0!3m2!1sen!2sid!4v1708499142890!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
