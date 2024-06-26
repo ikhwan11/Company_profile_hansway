@@ -152,7 +152,7 @@ class MainController extends Controller
     public function news_category()
     {
 
-        $data = News::latest()->filter(request(['search']))->paginate(2)->withQueryString();
+        $data = News::latest()->filter(request(['search']))->paginate(6)->withQueryString();
 
         return view('front_end/news/news-category', [
             'title' => 'News & Article',
@@ -173,7 +173,7 @@ class MainController extends Controller
         return view('front_end/career', [
             'title' => 'Career',
             'navbar' => Company::all(),
-            'careers' => Career::all(),
+            'careers' => Career::where('status', 'aktif')->get(),
             'image' => Page::find(1)
         ]);
     }

@@ -33,6 +33,7 @@ class CareerController extends Controller
             'position' => 'required|max:255',
             'slug' => 'required|max:255|unique:careers',
             'qualification' => 'required',
+            'status' => 'required',
             'salary_offer' => 'max:255',
         ]);
 
@@ -71,6 +72,7 @@ class CareerController extends Controller
         $rules = [
             'position' => 'required|max:255',
             'qualification' => 'required',
+            'status' => 'required',
             'salary_offer' => 'max:255',
         ];
 

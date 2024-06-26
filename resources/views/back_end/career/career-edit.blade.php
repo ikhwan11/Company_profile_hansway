@@ -66,6 +66,28 @@
                                     @enderror
                                 </div>
 
+                                <div class="form-group col-md-6">
+                                    <label>Status</label>
+                                    <select class="form-control select2 @error('status') is-invalid @enderror" style="width: 100%;" id="status" name="status">
+                                        @if($data->status == 'aktif')
+                                        <option value="aktif" selected>Aktif</option>
+                                        <option value="non-aktif">Non-Aktif</option>
+                                        @elseif($data->status == 'non-aktif')
+                                        <option value="aktif">Aktif</option>
+                                        <option value="non-aktif" selected>Non-Aktif</option>
+                                        @else
+                                        <option value="" selected>--pilih status--</option>
+                                        <option value="aktif">Aktif</option>
+                                        <option value="non-aktif">Non-Aktif</option>
+                                        @endif
+                                    </select>
+                                    @error('category')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
                                 <div class="form-group">
                                     <label for="">Qualifications</label>
                                     <input id="qualification" type="hidden" name="qualification" value="{{old('qualification', $data->qualification)}}">

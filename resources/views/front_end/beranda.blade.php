@@ -26,42 +26,17 @@
 
     </div><!-- /.carousel -->
 </section><!-- /.slider -->
-<!-- ========================
-      About 4
-    =========================== -->
-<!-- <section id="about4" class="about about-2 about-4 pb-40">
+
+<section id="about4" class="about about-2 about-4 pb-40">
     <div class="container">
         <div class="row">
             @foreach($abouts as $about)
             <div class="col-sm-12 col-md-12 col-lg-7">
                 <div class="row heading heading-2">
                     <div class="col-sm-12 col-md-12 col-sm-12">
-                        <h2 class="heading__title">Provide Best Services and High Quality Products</h2>
+                        <h2 class="heading__title">Best Ship Chandler Service: Providing Superior and High Quality Products for shipping needs, safety equipment, to Ship Maintenance</h2>
                     </div>
-                    <div class="col-sm-12 col-md-5 col-lg-5">
-                        <div class="carousel owl-carousel carousel-dots" data-slide="1" data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="700">
-
-                            <div class="fancybox-item">
-                                <div class="fancybox__icon">
-                                    <i class="icon-transfer"></i>
-                                </div>
-                                <div class="fancybox__content">
-                                    <h4 class="fancybox__title">Vision statement</h4>
-                                    {!!$about->vision!!}
-                                </div>
-                            </div>
-                            <div class="fancybox-item">
-                                <div class="fancybox__icon">
-                                    <i class="icon-worldwide"></i>
-                                </div>
-                                <div class="fancybox__content">
-                                    <h4 class="fancybox__title">Mission statement</h4>
-                                    {!!$about->mission!!}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-7 col-lg-7">
+                    <div class="col-sm-12">
                         {!!$about->about_text!!}
                     </div>
                 </div>
@@ -70,13 +45,12 @@
             <div class="col-sm-12 col-md-9 col-lg-5">
                 <div class="about__img mb-60">
                     <img src="{{asset('storage/'.$about->image)}}" alt="about img" class="img-fluid">
-                    <span>More About Us!</span>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-</section> -->
+</section>
 
 
 <!-- ========================

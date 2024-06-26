@@ -59,6 +59,7 @@
                                 <th>Posisi</th>
                                 <th>Offering Salary</th>
                                 <th>Action</th>
+                                <th>status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -83,6 +84,7 @@
                                         <button class="btn btn-danger" title="Hapus {{$career->position}}" onclick="return confirm('Apakah anda yakin ingin menghapus {{$career->position}}?')"><i class="fas fa-trash"></i></button>
                                     </form>
                                 </td>
+                                <td>{{$career->status}}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -136,6 +138,19 @@
                                     <label for="">Salary offer</label>
                                     <input class="form-control @error('salary_offer') is-invalid @enderror" type="text" placeholder="kosongkan jika tidak perlu.." id="salary_offer" name="salary_offer">
                                     @error('salary_offer')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Status</label>
+                                    <select class="form-control select2 @error('status') is-invalid @enderror" style="width: 100%;" id="status" name="status">
+                                        <option value="" selected>--pilih status--</option>
+                                        <option value="aktif">Aktif</option>
+                                        <option value="non-aktif">Non-Aktif</option>
+                                    </select>
+                                    @error('category')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>

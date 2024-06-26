@@ -442,32 +442,21 @@
                                 </nav>
                             </div><!-- /.footer-widget-content -->
                         </div><!-- /.col-lg-2 -->
-                        <div class="col-md-2 footer__widget footer__widget-nav mt-4">
-                            <h6 class="footer__widget-title">What We Do</h6>
+                        <div class="col-md-4 footer__widget footer__widget-nav mt-4">
+                            <h6 class="footer__widget-title">Learn More:</h6>
                             <div class="footer__widget-content">
-                                <nav>
-                                    <ul class="list-unstyled">
-                                        <li><a href="/Our-Service/Ship-services">Ship Services</a></li>
-                                        <li><a href="/Our-Service/Ship-Chandlers">Ship Chandler</a></li>
-                                        <li><a href="/Our-Service/Warehousing-and-Logistic">Warehouse & Logistics</a></li>
-                                    </ul>
-                                </nav>
+                                <div class="widget widget-download">
+                                    <h5 class="widget__title">Download</h5>
+                                    <div class="widget__content">
+                                        <a href="https://drive.google.com/file/d/1wuLXfxDTDGu7txATTIf055T266K4A3ke/view?usp=sharing" target="_blank" class="btn btn__primary btn__block btn__hover2">
+                                            <span>Company Brochure</span>
+                                            <img src="{{asset('front_templates')}}/icons/pdf.png" alt="pdf">
+                                        </a>
+                                    </div><!-- /.widget-content -->
+                                </div><!-- /.widget-download -->
                             </div><!-- /.footer-widget-content -->
                         </div><!-- /.col-lg-2 -->
-                        <div class="col-md-2 footer__widget footer__widget-nav mt-4">
-                            <h6 class="footer__widget-title">Quick Links</h6>
-                            <div class="footer__widget-content">
-                                <nav>
-                                    <ul class="list-unstyled">
-                                        <li><a href="/About-us">About Us</a></li>
-                                        <li><a href="/Service">Our Services</a></li>
-                                        <!-- <li><a href="#">Our Projects</a></li> -->
-                                        <li><a href="/News-&-Article">News & Article</a></li>
-                                        <li><a href="/Career">Career</a></li>
-                                    </ul>
-                                </nav>
-                            </div><!-- /.footer-widget-content -->
-                        </div><!-- /.col-lg-2 -->
+
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </div><!-- /.footer-top -->
