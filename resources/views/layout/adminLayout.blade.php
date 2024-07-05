@@ -27,10 +27,16 @@
   <!-- Daterange picker -->
   <link rel="stylesheet" href="{{asset('back_templates')}}/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="{{asset('back_templates')}}/plugins/summernote/summernote-bs4.min.css">
+  <!-- matikan ini -->
+  <!-- <link rel="stylesheet" href="{{asset('back_templates')}}/plugins/summernote/summernote-bs4.min.css"> -->
   <!-- trix editor -->
   <link rel="stylesheet" type="text/css" href="{{asset('trix_editor')}}/trix.css">
   <!-- switch -->
+
+
+  <!-- summernote 2 -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
 
   <style>
     trix-toolbar [data-trix-button-group="file-tools"] {
@@ -546,16 +552,53 @@
   </div>
   <!-- ./wrapper -->
 
+
+  <!-- summernote -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Bootstrap 4 JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Summernote JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#body').summernote({
+        height: 500, // set editor height
+        width: 1200,
+        minHeight: null, // set minimum height of editor
+        maxHeight: null, // set maximum height of editor
+        focus: true, // set focus to editable area after initializing summernote
+        toolbar: [
+          // [groupName, [list of button]]
+          ['style', ['bold', 'italic', 'underline', 'style']],
+          ['font', ['strikethrough', 'superscript', 'subscript']],
+          ['fontsize', ['fontsize']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']],
+          ['insert', ['link', 'table']],
+          ['view', ['fullscreen', 'codeview', 'help']],
+
+        ]
+      });
+    });
+  </script>
+
+
+  <!-- matikan ini -->
   <!-- jQuery -->
-  <script src="{{asset('back_templates')}}/plugins/jquery/jquery.min.js"></script>
+  <!-- <script src="{{asset('back_templates')}}/plugins/jquery/jquery.min.js"></script> -->
   <!-- jQuery UI 1.11.4 -->
-  <script src="{{asset('back_templates')}}/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- <script src="{{asset('back_templates')}}/plugins/jquery-ui/jquery-ui.min.js"></script> -->
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
   <!-- Bootstrap 4 -->
-  <script src="{{asset('back_templates')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- matikan ini -->
+  <!-- <script src="{{asset('back_templates')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
   <!-- ChartJS -->
   <script src="{{asset('back_templates')}}/plugins/chart.js/Chart.min.js"></script>
   <!-- Sparkline -->
@@ -571,7 +614,7 @@
   <!-- Tempusdominus Bootstrap 4 -->
   <script src="{{asset('back_templates')}}/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <!-- Summernote -->
-  <script src="{{asset('back_templates')}}/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- <script src="{{asset('back_templates')}}/plugins/summernote/summernote-bs4.min.js"></script> -->
   <!-- overlayScrollbars -->
   <script src="{{asset('back_templates')}}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
@@ -582,6 +625,8 @@
   <script src="{{asset('back_templates')}}/dist/js/pages/dashboard.js"></script>
   <!-- trix editor -->
   <script type="text/javascript" src="{{asset('trix_editor')}}/trix.umd.min.js"></script>
+
+
 
   <script>
     const title = document.querySelector("#title , #name , #position, #headline, #company_name");
@@ -620,6 +665,9 @@
       }
     }
   </script>
+
+
+
 </body>
 
 </html>

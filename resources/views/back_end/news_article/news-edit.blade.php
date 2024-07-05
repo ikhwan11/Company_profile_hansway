@@ -122,8 +122,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Body</label>
-                                    <input id="body" type="hidden" name="body" value="{{old('body', $data->body)}}">
-                                    <trix-editor input="body"></trix-editor>
+                                    <textarea id="body" name="body">{{old('body', $data->body)}}</textarea>
                                     @error('body')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror

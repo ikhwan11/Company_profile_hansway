@@ -188,7 +188,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <img src="{{asset('default-images')}}/news-default.jpg" class="img-preview img-fluid ml-4 mt-4" style="width: 50%;">
+                                    <img src="{{asset('default-images')}}/news-default.jpg" class="img-preview img-fluid ml-4 mt-4" style="width: 40%;">
                                     <div class="custom-file mt-2 ml-3 col-md-6 mb-3">
                                         <input class="form-control  @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" value="{{old('image')}}">
                                         @error('image')
@@ -196,10 +196,17 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="">Body</label>
                                     <input id="body" type="hidden" name="body" value="{{old('body')}}">
                                     <trix-editor input="body"></trix-editor>
+                                    @error('body')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div> -->
+                                <div class="form-group">
+                                    <label for="">Body</label>
+                                    <textarea id="body" name="body">{{old('body')}}</textarea>
                                     @error('body')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -218,6 +225,7 @@
     </section>
 </div>
 <!-- /.card -->
+
 
 
 
