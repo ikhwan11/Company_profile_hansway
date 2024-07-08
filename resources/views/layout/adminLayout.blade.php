@@ -629,13 +629,14 @@
 
 
   <script>
-    const title = document.querySelector("#title , #name , #position, #headline, #company_name");
+    const title = document.querySelector("#title, #name, #position, #headline, #company_name");
     const slug = document.querySelector("#slug");
 
     title.addEventListener("keyup", function() {
       let preslug = title.value;
       preslug = preslug.replace(/ /g, "-");
-      slug.value = preslug.toLowerCase();
+      preslug = preslug.replace(/[^a-zA-Z-]/g, "").toLowerCase();
+      slug.value = preslug;
     });
 
     document.addEventListener('trix-file-accept', function(e) {
